@@ -4,6 +4,92 @@
     margin: 0;
     padding: 0;
 }
+@import "colors.scss";
+
+*::selection{
+    background: $colorPrincipal;
+    color: $colorClaro;
+}
+
+body{
+    background-color: $colorPrincipal;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.formulario{
+    position: relative;
+    background-color: $colorOscuro;
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: 0 0 25px #00000049;
+    display: grid;
+    place-items: center;
+    gap: 30px;
+    padding-bottom: 90px;
+    img{
+        max-width: 200px;
+        filter: drop-shadow(0 0 30px #00000030);
+    }
+    form{
+        display: grid;
+        gap: 15px;
+    }
+}
 h1{
-    color: #221335;
+    color: $colorClaro;
+    padding: 20px;
+}
+.botonFormularios{
+    width: 100%;
+    background-color: $colorClaro;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    color: $colorPrincipal;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.botonFormularios:hover{
+    color: $colorOscuro;
+    cursor: pointer;
+}
+
+
+input, select, textarea{
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: $colorDark;
+    padding: 0 15px;
+    color: $colorClaro;
+    font-size: 1rem;
+    min-width: 300px;
+}
+
+textarea{
+    border-radius: 20px;
+    padding: 10px;
+}
+
+option{
+    background-color: $colorClaro;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input::placeholder, textarea::placeholder{
+    color: $colorClaro;
+    opacity: 0.1;
+    font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: none;
 }
